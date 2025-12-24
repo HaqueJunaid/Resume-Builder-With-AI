@@ -6,9 +6,9 @@ import Logo from "../components/logo";
 const Signup = () => {
   return (
     <div className="w-full relative h-screen flex items-center justify-center">
-    <div className="absolute top-5 left-5 lg:top-10 lg:left-10">
+      <div className="absolute top-5 left-5 lg:top-10 lg:left-10">
         <Logo />
-    </div>
+      </div>
       <div className="flex h-screen w-full">
         <div className="w-full flex flex-col items-center justify-center">
           <form className="md:w-96 w-80 flex flex-col items-center justify-center">
@@ -83,12 +83,13 @@ const Signup = () => {
         </div>
         <div className="w-full overflow-hidden hidden md:inline-block">
           <img
-            className="w-[50vw]"
+            className="w-[50vw] h-full object-center object-cover"
             src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/login/leftSideImage.png"
             alt="leftSideImage"
           />
         </div>
       </div>
+      <div className="w-72 h-72 rounded-full blur-[15rem] bg-green-500 absolute -left-0 -bottom-0"></div>
     </div>
   );
 };
