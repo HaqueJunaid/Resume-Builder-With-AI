@@ -89,7 +89,7 @@ const Signup = () => {
           />
         </div>
       </div>
-      <div className="w-72 h-72 rounded-full blur-[15rem] bg-green-500 absolute -left-0 -bottom-0"></div>
+      <div className="w-72 h-72 rounded-full blur-[15rem] bg-green-500 absolute left-0 bottom-0"></div>
     </div>
   );
 };

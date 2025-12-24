@@ -3,14 +3,16 @@ import Home from "./pages/Home"
 import NotFound from "./pages/404"
 import Login from "./pages/Login"
 import Signup from "./pages/SignUp"
+import Dashboard from "./pages/Dashboard"
+import Layout from "./pages/Layout"
 
 function App() {
 
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/app" element={"Layout"}>
-        <Route index element={"dashboard"} />
+      <Route path="/app" element={<Layout />}>
+        <Route index element={<Dashboard />} />
         <Route path="builder/:resumeId" element="resumeBuilder" />
       </Route>
 
