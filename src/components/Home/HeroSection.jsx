@@ -112,13 +112,13 @@ const HeroSection = () => {
           )}
           <div className="hidden lg:flex gap-3">
             <Link
-              to="/app?state=login"
+              to="/login"
               className="hidden md:block bg-transparent hover:bg-neutral-700/50 border border-neutral-600/70 text-white px-4 py-2 rounded-full transition"
             >
               Log In
             </Link>
             <Link
-              to="/app?state=register"
+              to="/signup"
               className="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition"
             >
               Sign Up
