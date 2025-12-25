@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../logo";
+import Logo from "../Logo";
 
 const HeroSection = () => {
   const navLinks = [

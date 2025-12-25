@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./logo";
+import Logo from "./Logo";
 import { LogOut } from "lucide-react";
 
 const LayoutNavbar = () => {

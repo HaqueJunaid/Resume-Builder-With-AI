@@ -1,7 +1,7 @@
 import { LockIcon, Mail, User } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../components/logo";
+import Logo from "../components/Logo";
 
 const Signup = () => {
   return (

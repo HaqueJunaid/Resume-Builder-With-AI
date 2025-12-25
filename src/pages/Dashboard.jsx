@@ -8,12 +8,25 @@ import {
 } from "lucide-react";
 import { dummyResumeData } from "../assets/assets";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigator = useNavigate();
   const colours = ["#9333ea", "#d97706", "#dc2626", "#0284c7", "#16a34a"];
   const [allResumes, setAllResumes] = useState([]);
   const [isCreateResume, setIsCreateResume] = useState(false);
   const [isUploadResume, setIsUploadResume] = useState(false);
+  const [title, setTitle] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [resumeId, setResumeId] = useState("asdfasd4564asd121a");
+  
+
+  const handleCreateResume = async(e) => { 
+    e.preventDefault();
+    console.log(title);
+    
+    navigator("/app/builder/" + resumeId)
+  }
 
   const loadAllResumes = async () => {
     setAllResumes(dummyResumeData);
@@ -55,7 +68,7 @@ const Dashboard = () => {
             className="w-full h-screen lg:w-[120rem] lg:h-[120rem] left-1/2 top-1/2 -translate-1/2 absolute bg-black/50 lg:bg-radial lg:from-green-700/20 tlg:o-black/80 backdrop-blur-lg"
           ></div>
 
-          <form className="absolute left-1/2 top-1/2 z-102 -translate-1/2 border border-green-500/50 px-10 py-7 w-[90%] lg:w-1/4 bg-black rounded-xl flex items-center justify-center flex-col">
+          <form onSubmit={handleCreateResume} className="absolute left-1/2 top-1/2 z-102 -translate-1/2 border border-green-500/50 px-10 py-7 w-[90%] lg:w-1/4 bg-black rounded-xl flex items-center justify-center flex-col">
             <div className="flex justify-between items-center w-full">
               <h2 className="text-2xl font-semibold text-neutral-100">
                 Create a resume
@@ -68,6 +81,8 @@ const Dashboard = () => {
               </div>
             </div>
             <input
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
               type="text"
               placeholder="Enter resume title"
               className="w-full mt-3 px-2.5 py-2 outline-none border border-neutral-300/30 rounded-md placeholder:font-light placeholder:text-neutral-200/50"
