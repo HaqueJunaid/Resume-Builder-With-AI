@@ -82,7 +82,7 @@ const Testimonial = () => {
       <div id="testimonial" className="bg-black w-full py-36 lg:py-12">
         <div className="flex flex-col items-center mb-8">
           <Badge text="Loved by users" />
-          <h1 className="text-transparent bg-linear-to-r bg-clip-text from-neutral-300 via-neutral-100 to-neutral-300 mt-4 text-2xl w-md lg:text-4xl font-bold lg:w-xl text-center">
+          <h1 className="text-transparent bg-linear-to-r bg-clip-text from-neutral-300 via-neutral-100 to-neutral-300 mt-4 text-2xl w-sm lg:text-4xl font-bold lg:w-xl text-center">
             Assisting individuals in achieving their career aspirations.
           </h1>
           <p className="text-sm w-sm lg:text-lg text-neutral-400 lg:w-md text-center leading-none mt-3">
