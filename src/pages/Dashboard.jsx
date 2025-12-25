@@ -83,7 +83,7 @@ const Dashboard = () => {
         <div className="absolute h-screen w-full z-101 left-0 top-0 overflow-hidden">
           <div
             onClick={() => setIsUploadResume(false)}
-            className="w-full h-screen lg:w-[120rem] lg:h-[120rem] left-1/2 top-1/2 -translate-1/2 absolute bg-black/50 lg:bg-radial lg:from-green-700/20 tlg:o-black/80 backdrop-blur-lg"
+            className="w-full h-screen lg:w-480 lg:h-480 left-1/2 top-1/2 -translate-1/2 absolute bg-black/50 lg:bg-radial lg:from-green-700/20 tlg:o-black/80 backdrop-blur-lg"
           ></div>
 
           <form className="absolute left-1/2 top-1/2 z-102 -translate-1/2 border border-green-500/50 px-10 py-7 w-[90%] lg:w-1/4 bg-black rounded-xl flex items-center justify-center flex-col">
