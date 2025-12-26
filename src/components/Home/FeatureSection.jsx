@@ -7,10 +7,10 @@ const FeatureSection = () => {
       <div>
         <div className="flex flex-col items-center">
           <Badge text="AI-powered features" />
-          <h1 className="text-transparent bg-linear-to-r bg-clip-text from-neutral-300 via-neutral-100 to-neutral-300 mt-4 text-2xl w-sm lg:text-4xl font-bold lg:w-xl text-center">
+          <h1 className="text-transparent bg-linear-to-r bg-clip-text from-neutral-300 via-neutral-100 to-neutral-300 mt-4 text-2xl w-xs lg:text-4xl font-bold lg:w-xl text-center">
             Powerful Features to Build Your Standout Resume
           </h1>
-          <p className="text-sm lg:text-lg text-neutral-400 w-sm lg:w-lg text-center leading-xs mt-3">
+          <p className="text-sm lg:text-lg text-neutral-400 w-xs lg:w-lg text-center leading-xs mt-3">
             Explore tools designed to make your resume shine—powered by the latest AI technology.
           </p>
         </div>

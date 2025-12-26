@@ -96,20 +96,7 @@ const HeroSection = () => {
               <path d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          {isOpen && (
-            <div className="fixed border-r border-e-neutral-50/20 left-0 top-0 bg-neutral-700/50 backdrop-blur-md z-99 w-2/3 h-screen py-6 px-5 overflow-hidden flex flex-col gap-6">
-              {navLinks.map((nav, index) => (
-                <a
-                  key={index}
-                  href={nav.path}
-                  onClick={(e) => handleNavClick(e, nav.path, nav.label)}
-                  className="hover:text-green-600 transition-colors ease-in-out duration-300 text-2xl"
-                >
-                  {nav.label}
-                </a>
-              ))}
-            </div>
-          )}
+          
           <div className="hidden lg:flex gap-3">
             <Link
               to="/login"
@@ -125,6 +112,21 @@ const HeroSection = () => {
             </Link>
           </div>
         </nav>
+
+        {isOpen && (
+            <div className="fixed border-r border-e-neutral-50/20 left-0 top-0 bg-neutral-700/50 backdrop-blur-md z-99 w-2/3 h-screen py-6 px-5 overflow-hidden flex flex-col gap-6">
+              {navLinks.map((nav, index) => (
+                <a
+                  key={index}
+                  href={nav.path}
+                  onClick={(e) => handleNavClick(e, nav.path, nav.label)}
+                  className="hover:text-green-600 transition-colors ease-in-out duration-300 text-2xl"
+                >
+                  {nav.label}
+                </a>
+              ))}
+            </div>
+          )}
 
         <div className="flex flex-wrap items-center justify-center p-1.5 mt-24 rounded-full border border-green-900 bg-green-700/15 text-xs">
           <div className="flex items-center">

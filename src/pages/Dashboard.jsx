@@ -1,11 +1,4 @@
-import {
-  FilePenLine,
-  Pencil,
-  Plus,
-  Trash,
-  Upload,
-  XIcon,
-} from "lucide-react";
+import { FilePenLine, Pencil, Plus, Trash, Upload, XIcon } from "lucide-react";
 import { dummyResumeData } from "../assets/assets";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -16,17 +9,21 @@ const Dashboard = () => {
   const [allResumes, setAllResumes] = useState([]);
   const [isCreateResume, setIsCreateResume] = useState(false);
   const [isUploadResume, setIsUploadResume] = useState(false);
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState("");
   // eslint-disable-next-line no-unused-vars
   const [resumeId, setResumeId] = useState("asdfasd4564asd121a");
-  
 
-  const handleCreateResume = async(e) => { 
+  const handleCreateResume = async (e) => {
     e.preventDefault();
     console.log(title);
-    
-    navigator("/app/builder/" + resumeId)
-  }
+
+    navigator("/app/builder/" + resumeId);
+  };
+
+  const handleDelete = async (id) => {
+    alert("Are your really want to delete this resume ?");
+    setAllResumes(allResumes.filter((resume) => resume._id != id));
+  };
 
   const loadAllResumes = async () => {
     setAllResumes(dummyResumeData);
@@ -65,10 +62,13 @@ const Dashboard = () => {
         <div className="absolute h-screen w-full z-101 left-0 top-0 overflow-hidden">
           <div
             onClick={() => setIsCreateResume(false)}
-            className="w-full h-screen lg:w-[120rem] lg:h-[120rem] left-1/2 top-1/2 -translate-1/2 absolute bg-black/50 lg:bg-radial lg:from-green-700/20 tlg:o-black/80 backdrop-blur-lg"
+            className="w-full h-screen lg:w-480 lg:h-480 left-1/2 top-1/2 -translate-1/2 absolute bg-black/50 lg:bg-radial lg:from-green-700/20 tlg:o-black/80 backdrop-blur-lg"
           ></div>
 
-          <form onSubmit={handleCreateResume} className="absolute left-1/2 top-1/2 z-102 -translate-1/2 border border-green-500/50 px-10 py-7 w-[90%] lg:w-1/4 bg-black rounded-xl flex items-center justify-center flex-col">
+          <form
+            onSubmit={handleCreateResume}
+            className="absolute left-1/2 top-1/2 z-102 -translate-1/2 border border-green-500/50 px-10 py-7 w-[90%] lg:w-1/4 bg-black rounded-xl flex items-center justify-center flex-col"
+          >
             <div className="flex justify-between items-center w-full">
               <h2 className="text-2xl font-semibold text-neutral-100">
                 Create a resume
@@ -81,8 +81,8 @@ const Dashboard = () => {
               </div>
             </div>
             <input
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
               type="text"
               placeholder="Enter resume title"
               className="w-full mt-3 px-2.5 py-2 outline-none border border-neutral-300/30 rounded-md placeholder:font-light placeholder:text-neutral-200/50"
@@ -134,8 +134,7 @@ const Dashboard = () => {
               </svg>
               <p class="text-neutral-500">Drag & drop your files here</p>
               <p class="text-neutral-400">
-                Or <span class="text-green-500 underline">click</span> to
-                upload
+                Or <span class="text-green-500 underline">click</span> to upload
               </p>
               <input id="fileInput" type="file" class="hidden" />
             </label>
@@ -162,8 +161,14 @@ const Dashboard = () => {
                 borderColor: `${baseColour}40`,
               }}
             >
-              <FilePenLine style={{ color: `${baseColour}` }} className="size-8 md:size-6" />
-              <p className="text-md md:text-sm" style={{ color: `${baseColour}` }}>
+              <FilePenLine
+                style={{ color: `${baseColour}` }}
+                className="size-8 md:size-6"
+              />
+              <p
+                className="text-md md:text-sm"
+                style={{ color: `${baseColour}` }}
+              >
                 {d.title}
               </p>
               <p
@@ -175,6 +180,7 @@ const Dashboard = () => {
 
               <div className="absolute right-3 lg:right-2 top-3 lg:top-2 flex gap-2 md:gap-0">
                 <Trash
+                  onClick={() => handleDelete(d._id)}
                   className="block lg:hidden lg:group-hover:block hover:bg-neutral-300/10 p-1 size-7 md:size-6 rounded-sm"
                   style={{ color: `${baseColour}` }}
                 />
