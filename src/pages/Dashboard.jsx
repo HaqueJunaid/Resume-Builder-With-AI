@@ -1,7 +1,7 @@
 import { FilePenLine, Pencil, Plus, Trash, Upload, XIcon } from "lucide-react";
 import { dummyResumeData } from "../assets/assets";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const navigator = useNavigate();
@@ -21,8 +21,10 @@ const Dashboard = () => {
   };
 
   const handleDelete = async (id) => {
-    alert("Are your really want to delete this resume ?");
-    setAllResumes(allResumes.filter((resume) => resume._id != id));
+    const confirm = window.confirm("Are your really want to delete this resume ?");
+    if (confirm){
+      setAllResumes(allResumes.filter((resume) => resume._id != id));
+    }
   };
 
   const loadAllResumes = async () => {
@@ -153,7 +155,7 @@ const Dashboard = () => {
         {allResumes.map((d, index) => {
           const baseColour = colours[index % colours.length];
           return (
-            <button
+            <Link to={`/app/builder/` + d._id}
               key={index}
               className={`relative w-full group sm:max-w-36 h-72 md:h-48 flex flex-col items-center justify-center rounded-lg gap-2 border cursor-pointer`}
               style={{
@@ -180,7 +182,7 @@ const Dashboard = () => {
 
               <div className="absolute right-3 lg:right-2 top-3 lg:top-2 flex gap-2 md:gap-0">
                 <Trash
-                  onClick={() => handleDelete(d._id)}
+                  onClick={(e) => handleDelete(d._id)}
                   className="block lg:hidden lg:group-hover:block hover:bg-neutral-300/10 p-1 size-7 md:size-6 rounded-sm"
                   style={{ color: `${baseColour}` }}
                 />
@@ -189,7 +191,7 @@ const Dashboard = () => {
                   style={{ color: `${baseColour}` }}
                 />
               </div>
-            </button>
+            </Link>
           );
         })}
       </div>

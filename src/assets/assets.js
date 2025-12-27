@@ -11,7 +11,7 @@ export const dummyResumeData = [
             linkedin: "https://www.linkedin.com",
             website: "https://www.example.com",
             profession: "Full Stack Developer",
-            image: dummy_profile
+            image: ""
         },
         _id: "68d2a31a1c4dd38875bb037e",
         userId: "68c180acdf1775dfd02c6d87",
@@ -94,7 +94,7 @@ export const dummyResumeData = [
             linkedin: "https://www.linkedin.com/in/jordanlee",
             website: "https://www.jordanlee.dev",
             profession: "Frontend Engineer",
-            image: dummy_profile
+            image: ""
         },
         _id: "78e3b42c2d5ff49286cc148f",
         userId: "78d2e0bdcf2886efg03e7e98",
@@ -169,7 +169,7 @@ export const dummyResumeData = [
             linkedin: "https://www.linkedin.com/in/rileymorgan",
             website: "https://www.rileym.dev",
             profession: "Backend Developer",
-            image: dummy_profile
+            image: ""
         },
         _id: "89f4c53d3e6gg59397dd259g",
         userId: "89e3f1cedg3997fgh14f8f09",
