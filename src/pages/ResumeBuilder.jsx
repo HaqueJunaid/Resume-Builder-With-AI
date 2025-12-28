@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { dummyResumeData } from "../assets/assets";
-import { ArrowLeft, Briefcase, ChevronLeft, ChevronRight, FileText, FolderIcon, GraduationCap, MoveLeft, MoveLeftIcon, SparkleIcon, University, User } from "lucide-react";
+import { ArrowLeft, Briefcase, ChevronLeft, ChevronRight, FileText, FolderIcon, GraduationCap, SparkleIcon, User } from "lucide-react";
 import PersonalForm from "../components/PersonalForm";
+import Preview from "../components/Preview";
+import TempelateSelector from "../components/TempelateSelector";
+import AccentSelector from "../components/AccentSelector";
 
 const ResumeBuilder = () => {
   const { resumeId } = useParams();
@@ -49,7 +52,7 @@ const ResumeBuilder = () => {
 
   return (
     <div className="relative w-full lg:w-3/4 mx-auto min-h-screen px-6 pt-25 lg:pt-28  lg:px-6 pb-10 text-neutral-100">
-      <div className="flex gap-6 w-full min-h-scree">
+      <div className="flex flex-col lg:flex-row gap-6 w-full min-h-scree">
         <div className="flex-2 h-screen">
           <Link
             to="/app"
@@ -64,9 +67,13 @@ const ResumeBuilder = () => {
             <hr className="absolute top-0 left-0 h-1 bg-linear-to-r from-green-500 to-green-600 border-none transition-all ease-in-out duration-300" style={{width: `${activeSectionIndex * 100 / (sections.length - 1)}%`}} />
 
             {/* Nav */}
-            <div className="flex justify-between items-center mb-6 border-b border-green-500/30 py-1.5">
+            <div className="flex justify-between items-center mb-6 border-b border-green-500/30 py-2">
               {/* Buttons */}
-              <div></div>
+              <div className="flex itemce-center gap-2">
+                <TempelateSelector selectedTempelate={resumeData.template} onChange={(template) => setResumeData(prev => ({...prev, template}))} />
+                <AccentSelector selectedColor={resumeData.accent_color} onChange={(accent_color) => setResumeData(prev => ({...prev, accent_color}))} />
+              </div>
+
               <div className="flex items-center">
                 {activeSectionIndex !== 0 && (
                   <button onClick={() => setActiveSectionIndex((prevIndex) => Math.max(prevIndex - 1, 0))} disabled={activeSectionIndex === 0} className="flex items-center gap-1 p-3 rounded-l-2xl text-sm font-medium text-neutral-500/90 hover:bg-neutral-500/20 hover:text-neutral-200 transition-all duration-300 ease-in-out cursor-pointer">
@@ -94,7 +101,7 @@ const ResumeBuilder = () => {
             </div>
 
             {/* preview */}
-            
+            <Preview data={resumeData} template={resumeData.template} accentColor={resumeData.accent_color} />
         </div>
       </div>
     </div>

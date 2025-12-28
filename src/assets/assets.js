@@ -1,4 +1,4 @@
-import dummy_profile from '/avatar.png'
+// import dummy_profile from '/avatar.png'
 
 export const dummyResumeData = [
     {
@@ -66,7 +66,7 @@ export const dummyResumeData = [
             }
         ],
         template: "minimal-image",
-        accent_color: "#14B8A6",
+        accent_color: "#3B82F6",
         project: [
             {
                 name: "Team Task Management System",

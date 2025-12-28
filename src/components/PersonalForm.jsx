@@ -8,7 +8,7 @@ const PersonalForm = ({data, onChange, removeBackground, setRemoveBackgrond}) =>
         {key: 'phone', label: "Phone Number", icon: Phone, type: "tel", required: true, placeholder: "Enter your phone number"},
         {key: 'location', label: "Location", icon: LocateIcon, type: "text", required: true, placeholder: "Enter your location"},
         {key: 'profession', label: "Profession", icon: Briefcase, type: "text", required: true, placeholder: "Enter your profession"},
-        {key: 'linkediin', label: "LinkedIn Profile", icon: Linkedin, type: "url", required: false, placeholder: "Enter your linkedin profile"},
+        {key: 'linkedin', label: "LinkedIn Profile", icon: Linkedin, type: "url", required: false, placeholder: "Enter your linkedin profile"},
         {key: 'website', label: "Personal Website", icon: Globe, type: "url", required: false, placeholder: "Enter your personal website"},
     ]
 
