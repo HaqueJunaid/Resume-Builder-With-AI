@@ -6,6 +6,7 @@ import PersonalForm from "../components/PersonalForm";
 import Preview from "../components/Preview";
 import TempelateSelector from "../components/TempelateSelector";
 import AccentSelector from "../components/AccentSelector";
+import SummaryForm from "../components/SummaryForm";
 
 const ResumeBuilder = () => {
   const { resumeId } = useParams();
@@ -91,6 +92,7 @@ const ResumeBuilder = () => {
             {/* Form */}
             <div className="space-y-6">
               {activeSection.id === 'personal' && <PersonalForm data={resumeData.personal_info} onChange={(data) => setResumeData(prev =>({...prev, personal_info: data}))} removeBackground={removeBackground} setRemoveBackgrond={setRemoveBackground} />}
+              {activeSection.id === 'summary' && <SummaryForm data={resumeData.professional_summary} onChange={(data) => setResumeData(prev => ({...prev, professional_summary: data}))} />}
             </div>
           </div>
         </div>

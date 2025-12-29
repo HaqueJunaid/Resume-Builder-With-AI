@@ -3,7 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
 
+
 const Signup = () => {
+  // eslint-disable-next-line react-hooks/immutability
+  document.title = "ResuCraft | Signup"
+  
   return (
     <div className="w-full relative h-screen flex items-center justify-center">
       <div className="absolute top-5 left-5 lg:top-10 lg:left-10">

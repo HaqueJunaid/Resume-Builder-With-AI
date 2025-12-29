@@ -2,7 +2,11 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Logo";
 
+
 const HeroSection = () => {
+  // eslint-disable-next-line react-hooks/immutability
+  document.title = "ResuCraft"
+
   const navLinks = [
     { label: "Home", path: "#home" },
     { label: "Features", path: "#features" },

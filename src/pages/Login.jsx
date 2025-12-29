@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
 import { Lock, Mail } from "lucide-react";
 
+
 const Login = () => {
+  // eslint-disable-next-line react-hooks/immutability
+  document.title = "ResuCraft | Login"
+  
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="absolute top-5 left-5 lg:top-10 lg:left-10">
