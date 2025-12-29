@@ -6,7 +6,7 @@ import Logo from "../components/Logo";
 
 const Signup = () => {
   // eslint-disable-next-line react-hooks/immutability
-  document.title = "ResuCraft | Signup"
+  document.title = "resuCraft | Signup"
   
   return (
     <div className="w-full relative h-screen flex items-center justify-center">

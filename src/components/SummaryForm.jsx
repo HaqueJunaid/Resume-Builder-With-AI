@@ -6,7 +6,7 @@ const SummaryForm = ({ data, onChange }) => {
 
   return (
     <div>
-      <div className="flex  items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between">
         <div>
           <h3 className="text-lg font-semibold text-neutral-200">
             Professional Summary
@@ -15,7 +15,7 @@ const SummaryForm = ({ data, onChange }) => {
             Add a great summary about your profession
           </p>
         </div>
-        <button className="flex items-center gap-1 text-xs text-violet-600 bg-linear-to-br from-violet-50 to-violet-100 ring-violet-500 hover:ring transition-all duration-300 ease-in-out px-3 py-2 rounded-lg">
+        <button className="mt-4 flex md:mt-0 items-center gap-1 text-xs text-violet-600 bg-linear-to-br from-violet-50 to-violet-100 ring-violet-500 hover:ring transition-all duration-300 ease-in-out px-3 py-2 rounded-lg">
           <StarsIcon className="size-4" /> Enchange
         </button>
       </div>
@@ -28,7 +28,7 @@ const SummaryForm = ({ data, onChange }) => {
           value={data}
           onChange={(e) => onChange(e.target.value)}
         />
-        <p className="text-xs w-sm mx-auto text-center text-neutral-600">Tip: Keep it concise (3-4 sentences) and focus on your most relevant achievements and skills.</p>
+        <p className="text-xs w-3/4 mx-auto text-center text-neutral-600">Tip: Keep it concise (3-4 sentences) and focus on your most relevant achievements and skills.</p>
       </div>
 
       <button className="mt-4 px-4 py-2 bg-green-600/20 border border-green-500 rounded-lg cursor-pointer hover:bg-green-600/30 transition-all ease-in-out duration-300">

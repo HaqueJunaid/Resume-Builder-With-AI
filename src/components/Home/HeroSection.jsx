@@ -5,7 +5,7 @@ import Logo from "../Logo";
 
 const HeroSection = () => {
   // eslint-disable-next-line react-hooks/immutability
-  document.title = "ResuCraft"
+  document.title = "resuCraft"
 
   const navLinks = [
     { label: "Home", path: "#home" },

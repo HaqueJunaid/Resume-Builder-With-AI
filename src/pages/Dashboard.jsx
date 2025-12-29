@@ -28,7 +28,7 @@ const Dashboard = () => {
   };
 
   const loadAllResumes = async () => {
-    document.title = "ResuCraft | Dashboard"
+    document.title = "resuCraft | Dashboard"
     setAllResumes(dummyResumeData);
   };
 

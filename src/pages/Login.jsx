@@ -6,7 +6,7 @@ import { Lock, Mail } from "lucide-react";
 
 const Login = () => {
   // eslint-disable-next-line react-hooks/immutability
-  document.title = "ResuCraft | Login"
+  document.title = "resuCraft | Login"
   
   return (
     <div className="w-full h-screen flex items-center justify-center">
