@@ -1,15 +1,8 @@
 import {
-  Briefcase,
-  Globe,
-  Linkedin,
-  LocateIcon,
-  Mail,
-  Phone,
   StarsIcon,
-  User,
 } from "lucide-react";
 
-const SummaryForm = ({ data, onChange, setResumeData }) => {
+const SummaryForm = ({ data, onChange }) => {
 
   return (
     <div>

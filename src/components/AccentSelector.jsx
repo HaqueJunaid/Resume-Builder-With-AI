@@ -1,4 +1,4 @@
-import { Check, Layout, PaintBucket } from "lucide-react";
+import { Check, PaintBucket } from "lucide-react";
 import { useState } from "react";
 
 const AccentSelector = ({ selectedColor, onChange }) => {
