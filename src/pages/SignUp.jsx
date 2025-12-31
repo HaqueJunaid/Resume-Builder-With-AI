@@ -39,37 +39,35 @@ const Signup = () => {
               <div className="w-full h-px bg-neutral-500/90"></div>
             </div>
 
-            <div className="flex items-center w-full bg-transparent border border-gray-300/60 h-12 rounded-full overflow-hidden pl-6 gap-2">
+            <div className="flex items-center w-full bg-transparent border border-neutral-500/20 h-12 rounded-full overflow-hidden pl-6 gap-2">
               <User size={20} className="text-green-500" />
               <input
                 type="text"
                 placeholder="Name"
-                className="bg-transparent text-neutral-300/80 placeholder-neutral-500/80 outline-none text-sm w-full h-full"
+                className="bg-transparent text-neutral-200/90 placeholder-neutral-500/80 outline-none text-sm w-full h-full"
                 required
               />
             </div>
 
-            <div className="flex items-center w-full bg-transparent border border-gray-300/60 h-12 rounded-full overflow-hidden pl-6 gap-2 mt-6">
+            <div className="flex items-center w-full bg-transparent border border-neutral-500/20 h-12 rounded-full overflow-hidden pl-6 gap-2 mt-6">
               <Mail size={20} className="text-green-500" />
               <input
                 type="email"
                 placeholder="Email id"
-                className="bg-transparent text-neutral-300/80 placeholder-neutral-500/80 outline-none text-sm w-full h-full"
+                className="bg-transparent text-neutral-200/90 placeholder-neutral-500/80 outline-none text-sm w-full h-full"
                 required
               />
             </div>
 
-            <div className="relative w-full">
-              <div className="flex items-center mt-6 w-full bg-transparent border border-gray-300/60 h-12 rounded-full overflow-hidden pl-6 gap-2">
+              <div className="flex items-center mt-6 w-full bg-transparent border border-neutral-500/20 h-12 rounded-full overflow-hidden pl-6 gap-2">
                 <LockIcon size={20} className="text-green-500" />
                 <input
                   type="password"
                   placeholder="Password"
-                  className="bg-transparent text-neutral-300/80 placeholder-neutral-500/80 outline-none text-sm w-full h-full"
+                  className="bg-transparent text-neutral-200/90 placeholder-neutral-500/80 outline-none text-sm w-full h-full"
                   required
                 />
               </div>
-            </div>
 
             <button
               type="submit"

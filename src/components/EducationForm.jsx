@@ -1,4 +1,4 @@
-import { Briefcase, PlusIcon, Trash2 } from "lucide-react";
+import { Briefcase, GraduationCap, PlusIcon, Trash2 } from "lucide-react";
 
 const EducationForm = ({ data, onChange }) => {
   const addEducation = () => {
@@ -105,7 +105,7 @@ const EducationForm = ({ data, onChange }) => {
 
         {data.length === 0 && (
           <div className="w-full h-54 flex items-center flex-col justify-center">
-            <Briefcase className="text-green-500/20 size-15" />
+            <GraduationCap className="text-green-500/20 mb-2 size-15" />
             <p className="text-sm text-neutral-500">No work experience yet.</p>
             <p className="text-sm text-neutral-500">
               Click "Add Experience" to get started.

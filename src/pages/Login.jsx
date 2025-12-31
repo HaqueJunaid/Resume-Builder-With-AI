@@ -47,7 +47,7 @@ const Login = () => {
               <div className="w-full h-px bg-neutral-500/90"></div>
             </div>
 
-            <div className="flex items-center w-full bg-transparent border border-gray-300/60 h-12 rounded-full overflow-hidden pl-6 gap-2">
+            <div className="flex items-center w-full bg-transparent border border-neutral-500/20 h-12 rounded-full overflow-hidden pl-6 gap-2">
               <Mail size={20} className="text-green-500" />
               <input
                 type="email"
@@ -64,7 +64,7 @@ const Login = () => {
               >
                 Forgot password?
               </a>
-              <div className="flex items-center mt-6 w-full bg-transparent border border-gray-300/60 h-12 rounded-full overflow-hidden pl-6 gap-2">
+              <div className="flex items-center mt-6 w-full bg-transparent border border-neutral-500/20 h-12 rounded-full overflow-hidden pl-6 gap-2">
                 <Lock size={20} className="text-green-500" />
                 <input
                   type="password"
