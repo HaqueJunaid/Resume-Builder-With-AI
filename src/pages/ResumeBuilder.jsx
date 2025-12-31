@@ -7,6 +7,7 @@ import Preview from "../components/Preview";
 import TempelateSelector from "../components/TempelateSelector";
 import AccentSelector from "../components/AccentSelector";
 import SummaryForm from "../components/SummaryForm";
+import ExperienceForm from "../components/ExperienceForm";
 
 const ResumeBuilder = () => {
   const { resumeId } = useParams();
@@ -62,7 +63,7 @@ const ResumeBuilder = () => {
             <ArrowLeft className="size-5" />
             Back to dashboard
           </Link>
-          <div className="relative overflow-hidden mt-6 bg-black rounded-lg border border-green-500/30 p-6 pt-1">
+          <div className="relative overflow mt-6 bg-black rounded-lg border border-green-500/30 p-6 pt-1">
             {/* Progress Bar */}
             <hr className="absolute top-0 left-0 right-0 border-2 border-green-500/30" />
             <hr className="absolute top-0 left-0 h-1 bg-linear-to-r from-green-500 to-green-600 border-none transition-all ease-in-out duration-300" style={{width: `${activeSectionIndex * 100 / (sections.length - 1)}%`}} />
@@ -93,6 +94,7 @@ const ResumeBuilder = () => {
             <div className="space-y-6">
               {activeSection.id === 'personal' && <PersonalForm data={resumeData.personal_info} onChange={(data) => setResumeData(prev =>({...prev, personal_info: data}))} removeBackground={removeBackground} setRemoveBackgrond={setRemoveBackground} />}
               {activeSection.id === 'summary' && <SummaryForm data={resumeData.professional_summary} onChange={(data) => setResumeData(prev => ({...prev, professional_summary: data}))} />}
+              {activeSection.id === 'experience' && <ExperienceForm data={resumeData.experience} onChange={(data) => setResumeData(prev => ({...prev, experience: data}))} />}
             </div>
           </div>
         </div>
