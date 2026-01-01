@@ -77,7 +77,7 @@ const Signup = () => {
             </button>
             <p className="text-neutral-500/90 text-sm mt-4">
               Already have account?{" "}
-              <Link to={"/login"} className="text-green-500 hover:underline">
+              <Link to={"/login"} className="relative z-10 text-green-500 hover:underline">
                 Log in
               </Link>
             </p>
