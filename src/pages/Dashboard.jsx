@@ -183,7 +183,7 @@ const Dashboard = () => {
 
               <div className="absolute right-3 lg:right-2 top-3 lg:top-2 flex gap-2 md:gap-0">
                 <Trash
-                  onClick={(e) => handleDelete(d._id)}
+                  onClick={() => handleDelete(d._id)}
                   className="block lg:hidden lg:group-hover:block hover:bg-neutral-300/10 p-1 size-7 md:size-6 rounded-sm"
                   style={{ color: `${baseColour}` }}
                 />

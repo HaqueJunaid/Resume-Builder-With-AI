@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { dummyResumeData } from "../assets/assets";
-import { ArrowLeft, Briefcase, ChevronLeft, ChevronRight, FileText, FolderIcon, GraduationCap, SparkleIcon, User } from "lucide-react";
+import { ArrowLeft, Briefcase, ChevronLeft, ChevronRight, Download, EyeIcon, EyeOffIcon, FileText, FolderIcon, GraduationCap, Share2, SparkleIcon, User } from "lucide-react";
 import PersonalForm from "../components/PersonalForm";
 import Preview from "../components/Preview";
 import TempelateSelector from "../components/TempelateSelector";
@@ -55,6 +55,10 @@ const ResumeBuilder = () => {
     loadExistingResume();
   }, []);
 
+  const togglePublic = () => {
+    setResumeData({...resumeData, public: !resumeData.public})
+  }
+
   return (
     <div className="relative w-full lg:w-3/4 mx-auto min-h-screen px-6 pt-25 lg:pt-28  lg:px-6 pb-10 text-neutral-100">
       <div className="flex flex-col lg:flex-row gap-6 w-full min-h-scree">
@@ -104,10 +108,31 @@ const ResumeBuilder = () => {
             </div>
           </div>
         </div>
-        <div className="flex-3 bg-white lg:mt-6">
+        <div className="flex-3 mt-2.5">
             {/* Buttons */}
-            <div>
+            <div className="flex items-center justify-end mb-4 gap-2">
+                  {/* Share Butoon */}
+                  {resumeData.public && (
+                    <button className="flex items-center gap-1 text-sm text-blue-600 bg-linear-to-r from-blue-50 to-blue-100 px-3 py-1.5 rounded-lg hover:ring hover:ring-blue-600">
+                      <Share2 className="size-4" />
+                      Share
+                    </button>
+                  )}
 
+                  {/* Public/Private Toggle Button */}
+                  <button onClick={togglePublic} className="flex items-center gap-1 text-sm text-violet-600 bg-linear-to-r from-violet-50 to-violet-100 px-3 py-1.5 rounded-lg hover:ring hover:ring-violet-600">
+                    {resumeData.public ? <EyeIcon className="size-4" /> : <EyeOffIcon className="size-4"/>}
+                    {resumeData.public ? "Public" : "Private"}
+                  </button>
+
+                  {/* Downlaod Button */}
+                  <button 
+                    onClick={() => window.print()} 
+                    className="flex items-center gap-1 text-sm text-green-600 bg-linear-to-r from-green-50 to-green-100 px-3 py-1.5 rounded-lg hover:ring hover:ring-green-600"
+                  >
+                    <Download className="size-4"/>
+                    Downlaod
+                  </button>
             </div>
 
             {/* preview */}

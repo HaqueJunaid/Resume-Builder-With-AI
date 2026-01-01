@@ -14,39 +14,53 @@ const ClassicTemplate = ({ data, accentColor }) => {
         <div className="max-w-4xl mx-auto p-8 bg-white text-gray-800 leading-relaxed">
             {/* Header */}
             <header className="text-center mb-8 pb-6 border-b-2" style={{ borderColor: accentColor }}>
-                <h1 className="text-3xl font-bold mb-2" style={{ color: accentColor }}>
+                <h1 className="text-3xl font-bold leading-tighter" style={{ color: accentColor }}>
                     {data.personal_info?.full_name || "Your Name"}
                 </h1>
+                {data.personal_info?.profession && (
+                    <h3 className="mb-2 tracking-wide">{data.personal_info.profession}</h3>
+                )}
 
-                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                <div className="">
                     {data.personal_info?.email && (
-                        <div className="flex items-center gap-1">
+                        <div className="ml-4 inline-block">
+                            <div className="flex items-center gap-1">
                             <Mail className="size-4" />
                             <span>{data.personal_info.email}</span>
                         </div>
+                        </div>
                     )}
+
                     {data.personal_info?.phone && (
-                        <div className="flex items-center gap-1">
+                        <div className="ml-4 inline-block">
+                            <div className="flex items-center gap-1">
                             <Phone className="size-4" />
                             <span>{data.personal_info.phone}</span>
                         </div>
+                        </div>
                     )}
                     {data.personal_info?.location && (
-                        <div className="flex items-center gap-1">
+                        <div className="ml-4 inline-block">
+                            <div className="flex items-center gap-1">
                             <MapPin className="size-4" />
                             <span>{data.personal_info.location}</span>
                         </div>
+                        </div>
                     )}
                     {data.personal_info?.linkedin && (
-                        <div className="flex items-center gap-1">
+                        <div className="ml-4 inline-block">
+                            <div className="flex items-center gap-1">
                             <Linkedin className="size-4" />
                             <span className="break-all">{data.personal_info.linkedin}</span>
                         </div>
+                        </div>
                     )}
                     {data.personal_info?.website && (
-                        <div className="flex items-center gap-1">
+                        <div className="ml-4 inline-block">
+                            <div className="flex items-center gap-1">
                             <Globe className="size-4" />
                             <span className="break-all">{data.personal_info.website}</span>
+                        </div>
                         </div>
                     )}
                 </div>

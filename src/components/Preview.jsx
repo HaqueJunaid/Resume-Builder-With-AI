@@ -38,23 +38,22 @@ const Preview = ({data, template, accentColor, classes = ""}) => {
               @media print {
                 html, body {
                   width: 8.5in;
-                  height: 11in;
-                  overflow: hidden;
+                  min-height: 11in;
                 }
 
                 body * {
                   visibility: hidden;
                 }
 
-                #resume-preivew, #resume-preview *  {
-                  visibility: visibile;
+                #resume-preview, #resume-preview *  {
+                  visibility: visible;
                 }
 
                 #resume-preview {
                   position: absolute;
                   left: 0;
                   top: 0;
-                  widht: 100%;
+                  width: 100%;
                   height: auto;
                   margin: 0;
                   padding: 0;
