@@ -45,7 +45,7 @@ const HeroSection = () => {
     <div>
       <section
         id="home"
-        className="relative overflow-hidden flex flex-col items-center max-md:px-2 bg-black text-white text-sm pb-28 pt-8 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-linear-bg.svg)] bg-top bg-no-repeat h-[110vh]"
+        className="relative overflow-hidden flex flex-col items-center max-md:px-2 bg-black text-white text-sm pb-28 pt-8 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/red-gradient-bg.svg)] bg-top bg-no-repeat h-[110vh]"
       >
         <nav className="flex bg-black/20 backdrop-blur-md z-99 items-center border mx-4 w-full max-w-4xl justify-between border-neutral-500/50 px-4 py-2.5 rounded-full text-white">
           <Logo />
