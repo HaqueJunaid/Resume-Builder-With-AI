@@ -65,7 +65,7 @@ export const dummyResumeData = [
                 _id: "68d2a31a1c4dd38875bb0382"
             }
         ],
-        template: "minimal-image",
+        template: "classic",
         accent_color: "#3B82F6",
         project: [
             {

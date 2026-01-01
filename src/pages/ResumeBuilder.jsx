@@ -59,6 +59,17 @@ const ResumeBuilder = () => {
     setResumeData({...resumeData, public: !resumeData.public})
   }
 
+  const shareResume = async() => {
+      const first = window.location.href.split('/app/')[0];
+      const resumeUrl = first + '/view/' + resumeId;
+
+      if (navigator.share) {
+        navigator.share({url: resumeUrl, text: "My Resume"});
+      } else {
+        alert("Share not supported")
+      }
+  }
+
   return (
     <div className="relative w-full lg:w-3/4 mx-auto min-h-screen px-6 pt-25 lg:pt-28  lg:px-6 pb-10 text-neutral-100">
       <div className="flex flex-col lg:flex-row gap-6 w-full min-h-scree">
@@ -113,7 +124,7 @@ const ResumeBuilder = () => {
             <div className="flex items-center justify-end mb-4 gap-2">
                   {/* Share Butoon */}
                   {resumeData.public && (
-                    <button className="flex items-center gap-1 text-sm text-blue-600 bg-linear-to-r from-blue-50 to-blue-100 px-3 py-1.5 rounded-lg hover:ring hover:ring-blue-600">
+                    <button onClick={shareResume} className="flex items-center gap-1 text-sm text-blue-600 bg-linear-to-r from-blue-50 to-blue-100 px-3 py-1.5 rounded-lg hover:ring hover:ring-blue-600">
                       <Share2 className="size-4" />
                       Share
                     </button>

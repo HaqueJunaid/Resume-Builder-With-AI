@@ -2,10 +2,9 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Logo";
 
-
 const HeroSection = () => {
   // eslint-disable-next-line react-hooks/immutability
-  document.title = "resuCraft"
+  document.title = "resuCraft";
 
   const navLinks = [
     { label: "Home", path: "#home" },
@@ -21,7 +20,7 @@ const HeroSection = () => {
   function closeNavbar() {
     setIsOpen(false);
   }
-  
+
   function openNavbar() {
     setIsOpen(!isOpen);
   }
@@ -33,18 +32,21 @@ const HeroSection = () => {
 
     const sectionId = path.replace("#", "");
     const element = document.getElementById(sectionId);
-    
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
 
   return (
     <div>
-      <section id="home" className="relative overflow-hidden flex flex-col items-center max-md:px-2 bg-black text-white text-sm pb-28 pt-8 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] bg-top bg-no-repeat h-[110vh]">
+      <section
+        id="home"
+        className="relative overflow-hidden flex flex-col items-center max-md:px-2 bg-black text-white text-sm pb-28 pt-8 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-linear-bg.svg)] bg-top bg-no-repeat h-[110vh]"
+      >
         <nav className="flex bg-black/20 backdrop-blur-md z-99 items-center border mx-4 w-full max-w-4xl justify-between border-neutral-500/50 px-4 py-2.5 rounded-full text-white">
           <Logo />
           <div
@@ -100,7 +102,7 @@ const HeroSection = () => {
               <path d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          
+
           <div className="hidden lg:flex gap-3">
             <Link
               to="/login"
@@ -118,7 +120,8 @@ const HeroSection = () => {
         </nav>
 
         {isOpen && (
-            <div className="fixed border-r border-e-neutral-50/20 left-0 top-0 bg-neutral-700/50 backdrop-blur-md z-99 w-2/3 h-screen py-6 px-5 overflow-hidden flex flex-col gap-6">
+          <div className="fixed border-r border-green-500/20 left-0 top-0 bg-linear-to-br from-green-500 to-green-700 z-99 w-2/3 h-screen py-6 px-5 overflow-hidden flex flex-col justify-between">
+            <div className="flex flex-col gap-6">
               {navLinks.map((nav, index) => (
                 <a
                   key={index}
@@ -130,7 +133,22 @@ const HeroSection = () => {
                 </a>
               ))}
             </div>
-          )}
+            <div className="flex flex-col gap-3">
+              <Link
+                to="/login"
+                className="block md:hidden bg-transparent border border-neutral-100 text-center text-white px-4 py-2 rounded-full"
+              >
+                Log In
+              </Link>
+              <Link
+                to="/signup"
+                className="block md:hidden bg-white text-center text-green-600 px-4 py-2 rounded-full"
+              >
+                Sign Up
+              </Link>
+            </div>
+          </div>
+        )}
 
         <div className="flex flex-wrap items-center justify-center p-1.5 mt-24 rounded-full border border-green-900 bg-green-700/15 text-xs">
           <div className="flex items-center">
@@ -150,15 +168,20 @@ const HeroSection = () => {
               alt="userImage3"
             />
           </div>
-          <p className="-translate-x-2">Join community of 1m+ founders </p>
+          <p className="-translate-x-2">Create your resume like our users </p>
         </div>
 
         <h1 className="text-4xl md:text-7xl text-center font-semibold max-w-5xl mt-5 bg-linear-to-r from-white to-[#748298] text-transparent bg-clip-text">
-          Build Professional Resumes with AI
+          Build Professional{" "}
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-green-500 to-green-600">
+            Resume
+          </span>{" "}
+          with AI
         </h1>
 
         <p className="text-slate-300 md:text-base max-md:px-2 text-center max-w-2xl mt-3">
-          Build your standout resume with AI-powered suggestions and enhancements.
+          Build your standout resume with AI-powered suggestions and
+          enhancements.
         </p>
 
         <div className="flex items-center gap-2 mt-8 text-sm">
@@ -199,6 +222,11 @@ const HeroSection = () => {
             <div className="relative w-full bg-neutral-700/50 h-full rounded-tl-xl rounded-tr-xl">
               <span className="absolute top-0 left-1/2 -translate-x-1/2 block w-[60%] h-px blur-[1px] bg-linear-to-r from-transparent via-green-400/30 to-transparent"></span>
               <span className="absolute top-0 left-1/2 -translate-x-1/2 block w-[40%] h-px blur-[2px] bg-linear-to-r from-transparent via-green-400 to-transparent"></span>
+              <img
+                src="/public/hero.png"
+                alt="hero-image"
+                className="rounded-tl-xl rounded-tr-xl"
+              />
             </div>
           </div>
         </div>

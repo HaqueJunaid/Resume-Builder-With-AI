@@ -6,6 +6,7 @@ import Signup from "./pages/SignUp"
 import Dashboard from "./pages/Dashboard"
 import Layout from "./pages/Layout"
 import ResumeBuilder from "./pages/ResumeBuilder"
+import ResumeView from "./pages/ResumeView"
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
         <Route path="builder/:resumeId" element={<ResumeBuilder />} />
       </Route>
 
-      <Route path="view/:resumeId" element="view" />
+      <Route path="/view/:resumeId" element={<ResumeView />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 

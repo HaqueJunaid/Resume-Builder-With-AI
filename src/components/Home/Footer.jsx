@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-neutral-500/20">
           <div className="max-w-7xl text-neutral-100 mx-auto px-6 py-6 text-center text-sm font-normal">
-            <a className="text-green-500" href="https://prebuiltui.com">resume.</a> ©2025. All rights
+            <a className="text-green-500" href="https://prebuiltui.com">resuCraft</a> ©2026. All rights
             reserved.
           </div>
         </div>

@@ -6,6 +6,18 @@
   font-family: "Geom", sans-serif;
 }
 
+*::-webkit-scrollbar {
+  @apply w-2 appearance-none
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply w-1.5 rounded-3xl bg-green-700
+}
+
+*::selection {
+  @apply bg-green-600 text-white
+}
+
 body {
   background-color: black;
 }

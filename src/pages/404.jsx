@@ -3,7 +3,7 @@ import Logo from "../components/Logo"
 
 const NotFound = () => {
   return (
-    <div className="w-full h-screen bg-black bg-center bg-cover bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)]">
+    <div className="w-full h-screen bg-black bg-center bg-cover bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-linear-bg.svg)]">
         <div className="relative w-full h-screen flex flex-col items-center justify-center text-sm max-md:px-4 py-20">
             <div className="absolute left-5 top-5 md:left-10 md:top-10">
                 <Logo />
