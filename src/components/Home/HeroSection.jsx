@@ -223,7 +223,7 @@ const HeroSection = () => {
               <span className="absolute top-0 left-1/2 -translate-x-1/2 block w-[60%] h-px blur-[1px] bg-linear-to-r from-transparent via-green-400/30 to-transparent"></span>
               <span className="absolute top-0 left-1/2 -translate-x-1/2 block w-[40%] h-px blur-[2px] bg-linear-to-r from-transparent via-green-400 to-transparent"></span>
               <img
-                src="/public/hero.png"
+                src="/hero.png"
                 alt="hero-image"
                 className="rounded-tl-xl rounded-tr-xl"
               />
