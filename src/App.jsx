@@ -18,7 +18,7 @@ function App() {
         <Route path="builder/:resumeId" element={<ResumeBuilder />} />
       </Route>
 
-      <Route path="/view/:resumeId" element={<ResumeView />} />
+      <Route path="view/:resumeId" element={<ResumeView />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 

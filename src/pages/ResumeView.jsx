@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { dummyResumeData } from '../assets/assets';
 import ClassicTemplate from '../components/templates/ClassicTemplate';
@@ -10,7 +10,17 @@ import Logo from '../components/Logo';
 
 const ResumeView = () => {
     const {resumeId} = useParams();
-    const resumeData = dummyResumeData.find((resume) => resume._id === resumeId);
+    const [resumeData, setResumeData] = useState([]);
+    
+    const loadResume = async () => {
+      setResumeData(dummyResumeData.find((resume) => resume._id === resumeId));
+    }
+    
+    useEffect(() => {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      loadResume();
+    }, [])
+
   return (
     <div className='text-white p-8 relative overflow-x-hidden w-full min-h-screen overflow-y-hidden'>
         <div className='relative z-10 lg:absolute '>
